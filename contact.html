@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Collective — WENDZ</title>
+  <meta name="description" content="Partner with WENDZ. For brands and property owners ready to dominate physical space." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@300;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    .contact-page-hero {
+      padding: 10rem 3rem 4rem;
+    }
+
+    .contact-hero-headline {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(3rem, 10vw, 10rem);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      overflow: hidden;
+    }
+
+    .contact-hero-headline .line { display: block; overflow: hidden; }
+    .contact-hero-headline .line span {
+      display: block;
+      transform: translateY(110%);
+      opacity: 0;
+      animation: lineReveal 1.1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    }
+    .contact-hero-headline .line:nth-child(1) span { animation-delay: 2.5s; }
+    .contact-hero-headline .line:nth-child(2) span { animation-delay: 2.65s; }
+
+    .contact-hero-sub {
+      margin-top: 2rem;
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      color: var(--on-surface-variant);
+      max-width: 28rem;
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeSlideUp 1s cubic-bezier(0.19,1,0.22,1) 3.1s both;
+    }
+
+    @keyframes lineReveal {
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .forms-section {
+      background: var(--surface-container-low);
+      padding: 5rem 3rem 6rem;
+    }
+
+    .forms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .form-divider {
+      background: var(--outline-variant);
+      opacity: 0.4;
+    }
+
+    .form-panel { }
+
+    .form-path-label {
+      font-family: var(--font-label);
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--on-surface-variant);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .form-panel-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      line-height: 0.9;
+    }
+
+    .form-panel-desc {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--on-surface-variant);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 22rem;
+    }
+
+    .form-field { margin-bottom: 2rem; }
+
+    .field-label {
+      font-family: var(--font-label);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--on-surface-variant);
+      display: block;
+      margin-bottom: 0.6rem;
+      transition: color 0.3s ease;
+    }
+
+    .field-input,
+    .field-textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--outline-variant);
+      padding: 0.75rem 0;
+      font-family: var(--font-headline);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      color: var(--on-surface);
+      outline: none;
+      transition: border-color 0.3s ease;
+      resize: none;
+    }
+
+    .field-input::placeholder,
+    .field-textarea::placeholder { color: var(--outline-variant); }
+
+    .form-field:focus-within .field-label  { color: var(--primary); }
+    .form-field:focus-within .field-input,
+    .form-field:focus-within .field-textarea { border-color: var(--primary); }
+
+    .form-submit {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: none;
+      border: none;
+      cursor: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .submit-icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.25rem;
+      transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
+      flex-shrink: 0;
+    }
+
+    .submit-icon-circle.blue  { background: var(--primary); }
+    .submit-icon-circle.dark  { background: var(--on-surface); }
+
+    .form-submit:hover .submit-icon-circle { transform: scale(1.2) rotate(45deg); }
+
+    .submit-text {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+
+    /* success toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--on-surface);
+      color: var(--surface);
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--primary);
+      z-index: 5000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.19,1,0.22,1), opacity 0.4s ease;
+    }
+
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* HQ section */
+    .hq-section {
+      padding: 5rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .hq-status-card {
+      padding: 2.5rem;
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+    }
+
+    .status-pulse {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      animation: pulsate 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulsate {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,82,255,0.5); }
+      50%       { box-shadow: 0 0 0 8px rgba(0,82,255,0); }
+    }
+
+    .status-label {
+      font-family: var(--font-label);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .status-title {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .status-desc {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--on-surface-variant);
+      line-height: 1.6;
+      margin-top: 0.75rem;
+    }
+
+    .hq-map-card {
+      height: 360px;
+      overflow: hidden;
+      position: relative;
+      background: var(--surface-container-high);
+    }
+
+    .hq-map-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.5);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .hq-map-card:hover img { filter: grayscale(0); transform: scale(1.03); }
+
+    .hq-overlay {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+    }
+
+    .hq-city {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .hq-coords {
+      font-family: var(--font-label);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @media (max-width: 900px) {
+      .forms-grid { grid-template-columns: 1fr; }
+      .form-divider { display: none; }
+      .form-panel:first-child { padding-bottom: 3rem; border-bottom: 1px solid var(--outline-variant); margin-bottom: 3rem; }
+      .hq-section { grid-template-columns: 1fr; }
+      .contact-page-hero { padding: 8rem 1.5rem 3rem; }
+      .forms-section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-wordmark">
+      <span style="animation-delay:0.0s">J</span><span style="animation-delay:0.07s">O</span><span style="animation-delay:0.14s">I</span><span style="animation-delay:0.21s">N</span>
+    </div>
+    <div class="preloader-bar-track">
+      <div class="preloader-bar-fill"></div>
+    </div>
+    <span class="preloader-label">Opening the gates…</span>
+  </div>
+
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#stats">Impact</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="contact.html">Join Us</a>
+  </nav>
+
+  <header class="nav">
+    <a href="../index.html" class="nav-logo">WENDZ</a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html#stats">Impact</a></li>
+        <li><a href="../index.html#features">Network</a></li>
+        <li><a href="../index.html#journey">Process</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="contact.html" class="active">Join the Collective</a></li>
+      </ul>
+    </nav>
+    <button class="nav-cta" onclick="window.location='contact.html'">Partner Now</button>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <div class="contact-page-hero">
+      <span style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--primary);display:block;margin-bottom:1.5rem;opacity:0;animation:fadeSlideUp 0.8s cubic-bezier(0.19,1,0.22,1) 2.3s both">Contact / Infiltration</span>
+      <h1 class="contact-hero-headline">
+        <span class="line"><span>Begin the</span></span>
+        <span class="line"><span style="background:linear-gradient(135deg,var(--primary),var(--primary-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Takeover.</span></span>
+      </h1>
+      <p class="contact-hero-sub">
+        Standard retail is a corpse. The neon is flickering out. Join the resurrection of physical space — select your path below.
+      </p>
+    </div>
+
+    <!-- FORMS -->
+    <section class="forms-section" aria-labelledby="forms-heading">
+      <h2 class="sr-only" id="forms-heading">Partner Application Forms</h2>
+      <div class="forms-grid">
+
+        <!-- FOR BRANDS -->
+        <div class="form-panel reveal-left">
+          <span class="form-path-label">01 / Disruptors</span>
+          <h2 class="form-panel-title">For<br/>Brands.</h2>
+          <p class="form-panel-desc">You have the product. You have the cult. We have the stage. Apply to enter our ecosystem of high-impact micro-theatres.</p>
+
+          <form id="brand-form" novalidate>
+            <div class="form-field">
+              <label class="field-label" for="brand-name">Brand Identity</label>
+              <input class="field-input" id="brand-name" type="text" placeholder="WHO ARE YOU?" autocomplete="organization" />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="brand-url">Digital Footprint</label>
+              <input class="field-input" id="brand-url" type="url" placeholder="WEBSITE / INSTAGRAM" autocomplete="url" />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="brand-email">Email Address</label>
+              <input class="field-input" id="brand-email" type="email" placeholder="YOUR@EMAIL.COM" autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="brand-vision">The Vision</label>
+              <textarea class="field-textarea" id="brand-vision" rows="3" placeholder="HOW WILL YOU KILL TRADITION?"></textarea>
+            </div>
+            <button class="form-submit" type="submit" aria-label="Submit brand application">
+              <div class="submit-icon-circle blue">
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </div>
+              <span class="submit-text">Submit Manifesto</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="form-divider" aria-hidden="true"></div>
+
+        <!-- FOR PROPERTY OWNERS -->
+        <div class="form-panel reveal-right" style="margin-top:5rem">
+          <span class="form-path-label">02 / Custodians</span>
+          <h2 class="form-panel-title">For Property<br/>Owners.</h2>
+          <p class="form-panel-desc">Your real estate is underperforming. Let us inject culture, traffic, and high-frequency energy into your dead square footage.</p>
+
+          <form id="property-form" novalidate>
+            <div class="form-field">
+              <label class="field-label" for="prop-location">Location</label>
+              <input class="field-input" id="prop-location" type="text" placeholder="CITY / NEIGHBOURHOOD" />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="prop-space">Available Footprint</label>
+              <input class="field-input" id="prop-space" type="text" placeholder="SQ. FT / DIMENSIONS" />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="prop-email">Email Address</label>
+              <input class="field-input" id="prop-email" type="email" placeholder="YOUR@EMAIL.COM" autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label class="field-label" for="prop-status">Current Status</label>
+              <input class="field-input" id="prop-status" type="text" placeholder="VACANT / UNDER-UTILISED" />
+            </div>
+            <button class="form-submit" type="submit" aria-label="Submit property application">
+              <div class="submit-icon-circle dark">
+                <span class="material-symbols-outlined">domain</span>
+              </div>
+              <span class="submit-text">Resurrect Space</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HQ SECTION -->
+    <section class="hq-section" aria-label="Headquarters information">
+      <div class="hq-status-card reveal">
+        <span class="status-label">Current System Status</span>
+        <div class="status-pulse">
+          <div class="pulse-dot"></div>
+          <span class="status-title">Operational</span>
+        </div>
+        <p class="status-desc">Accepting selective partners for Q4 2025 expansion cycle. Limited slots available — Bengaluru, Hyderabad, Pune.</p>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--outline-variant)">
+          <span class="status-label">Inquiries</span>
+          <a href="mailto:hello@wendz.co" style="font-family:var(--font-headline);font-size:1.1rem;color:var(--on-surface);letter-spacing:-0.02em;transition:color 0.3s" onmouseenter="this.style.color='var(--primary)'" onmouseleave="this.style.color='var(--on-surface)'">hello@wendz.co</a>
+        </div>
+      </div>
+
+      <div class="hq-map-card reveal-right">
+        <img
+          src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=1200&q=80"
+          alt="Aerial view of Bengaluru city"
+          loading="lazy"
+        />
+        <div class="hq-overlay">
+          <div class="hq-city">Bengaluru HQ</div>
+          <div class="hq-coords">12.9716° N, 77.5946° E</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    ✦ Application received. We'll be in touch.
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-bg-word" aria-hidden="true">WENDZ</div>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">WENDZ</div>
+        <p class="footer-tagline">Not another boring screen. Ever.</p>
+      </div>
+      <div>
+        <span class="footer-col-label">Philosophy</span>
+        <ul class="footer-links">
+          <li><a href="manifesto.html">The Manifesto</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Connect</span>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Legal</span>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">©2025 WENDZ LLP. Stay Quirky.</p>
+      <a href="mailto:hello@wendz.co" class="footer-email">hello@wendz.co</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Form submit (demo)
+    const toast = document.getElementById('toast');
+
+    ['brand-form', 'property-form'].forEach(id => {
+      const form = document.getElementById(id);
+      if (!form) return;
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        toast.classList.add('show');
+        form.reset();
+        setTimeout(() => toast.classList.remove('show'), 4000);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WENDZ — Not Another Boring Screen.</title>
+  <meta name="description" content="WENDZ turns vending machines into advertising powerhouses. Smart nodes. Live screens. Real results." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@300;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ SCROLL PROGRESS ═══════════════ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══════════════ PRELOADER ═══════════════════════ -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-wordmark">
+      <span style="animation-delay:0.0s">W</span><span style="animation-delay:0.08s">E</span><span style="animation-delay:0.16s">N</span><span style="animation-delay:0.24s">D</span><span style="animation-delay:0.32s">Z</span>
+    </div>
+    <div class="preloader-bar-track">
+      <div class="preloader-bar-fill"></div>
+    </div>
+    <span class="preloader-label">Initialising nodes…</span>
+  </div>
+
+  <!-- ═══════════════ CUSTOM CURSOR ════════════════════ -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ═══════════════ MOBILE MENU ══════════════════════ -->
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#stats">Impact</a>
+    <a href="#features">Network</a>
+    <a href="pages/manifesto.html">Manifesto</a>
+    <a href="pages/contact.html">Join Us</a>
+  </nav>
+
+  <!-- ═══════════════ NAV ═══════════════════════════════ -->
+  <header class="nav" role="banner">
+    <a href="index.html" class="nav-logo">WENDZ</a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="#stats">Impact</a></li>
+        <li><a href="#features">Network</a></li>
+        <li><a href="#journey">Process</a></li>
+        <li><a href="pages/manifesto.html">Manifesto</a></li>
+        <li><a href="pages/contact.html" class="active">Join the Collective</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-cta" onclick="window.location='pages/contact.html'">Partner Now</button>
+
+    <button class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════ HERO ══════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
+
+      <span class="hero-eyebrow">The Future of Retail Media</span>
+
+      <h1 class="hero-headline" id="hero-heading">
+        <span class="line"><span>Not Another</span></span>
+        <span class="line"><span>Boring</span></span>
+        <span class="line"><span class="accent">Screen.</span></span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-subtext">
+          We catch eyes.<br/>
+          <strong>You keep them.</strong><br/>
+          Smart vending nodes that double as your brand's most captive audience.
+        </p>
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <div class="scroll-wheel">
+            <div class="scroll-wheel-dot"></div>
+          </div>
+          <span class="scroll-label">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MARQUEE ════════════════════════════ -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">Smart Nodes <span class="star">✦</span></div>
+        <div class="marquee-item">Live Screens <span class="star">✦</span></div>
+        <div class="marquee-item">Real Results <span class="star">✦</span></div>
+        <div class="marquee-item">Bengaluru Network <span class="star">✦</span></div>
+        <div class="marquee-item">500k+ Impressions <span class="star">✦</span></div>
+        <div class="marquee-item">IoT-Enabled <span class="star">✦</span></div>
+        <div class="marquee-item">Zero Ad-Blockers <span class="star">✦</span></div>
+        <!-- duplicate for infinite loop -->
+        <div class="marquee-item">Smart Nodes <span class="star">✦</span></div>
+        <div class="marquee-item">Live Screens <span class="star">✦</span></div>
+        <div class="marquee-item">Real Results <span class="star">✦</span></div>
+        <div class="marquee-item">Bengaluru Network <span class="star">✦</span></div>
+        <div class="marquee-item">500k+ Impressions <span class="star">✦</span></div>
+        <div class="marquee-item">IoT-Enabled <span class="star">✦</span></div>
+        <div class="marquee-item">Zero Ad-Blockers <span class="star">✦</span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════ STATS BENTO ═══════════════════════ -->
+    <section class="pt-section pb-section px-page" id="stats" aria-labelledby="stats-heading">
+      <h2 class="sr-only" id="stats-heading">Impact Numbers</h2>
+
+      <div class="stats-grid reveal-scale">
+
+        <div class="stat-card wide" data-tilt>
+          <span class="stat-label">Weekly Impressions</span>
+          <span class="stat-number count-up" data-count="500000" data-suffix="+">0</span>
+          <p class="stat-desc">Across our network — humans with wallets, zero bots, zero ad-blockers.</p>
+        </div>
+
+        <div class="stat-card accent" data-tilt>
+          <span class="stat-label">Key Locations</span>
+          <span class="stat-number" data-count="10" data-suffix="+">
+            <span data-count="10" data-suffix="+">10+</span>
+          </span>
+          <p class="stat-desc">High-traffic hubs where attention is the only currency.</p>
+        </div>
+
+        <div class="stat-card dark" data-tilt>
+          <span class="stat-label" style="color:rgba(249,249,249,0.5)">Gaze Duration</span>
+          <span class="stat-number" style="color:#b7c4ff;" data-count="94" data-suffix="%">0%</span>
+          <p class="stat-desc" style="color:rgba(249,249,249,0.6)">Screen dwell vs industry avg of 12%.</p>
+        </div>
+
+        <div class="stat-card" data-tilt>
+          <span class="stat-label">Cities Active</span>
+          <span class="stat-number count-up" data-count="3" data-suffix="">0</span>
+          <p class="stat-desc">Bengaluru-first. Expanding to Hyderabad & Pune in 2025.</p>
+        </div>
+
+        <div class="stat-card accent" style="background:var(--on-surface);color:var(--surface)" data-tilt>
+          <span class="stat-label" style="color:rgba(249,249,249,0.5)">Avg CPM</span>
+          <span class="stat-number" style="color:var(--primary-dim)">₹28</span>
+          <p class="stat-desc" style="color:rgba(249,249,249,0.6)">Versus ₹180 average for digital OOH.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ FEATURES DARK ════════════════════ -->
+    <section class="features-dark" id="features" aria-labelledby="features-heading">
+      <div class="features-line reveal"></div>
+
+      <span class="section-eyebrow reveal">What We Built</span>
+      <h2 class="features-headline reveal" id="features-heading">
+        Vending meets<br/><span class="accent">Advertising.</span>
+      </h2>
+
+      <div class="features-grid stagger-children">
+        <div class="feature-item">
+          <span class="feature-num">01</span>
+          <h3 class="feature-title" data-scramble>Smart Machines.</h3>
+          <p class="feature-desc">Equipped with IoT sensors and real-time inventory management. They're more than boxes — they're nodes in a living retail network.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-num">02</span>
+          <h3 class="feature-title" data-scramble>Live Screens.</h3>
+          <p class="feature-desc">4K high-brightness displays that cut through ambient noise. Dynamic content scheduling synced across the entire fleet.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-num">03</span>
+          <h3 class="feature-title" data-scramble>Real Results.</h3>
+          <p class="feature-desc">Granular analytics on interaction and conversion. Know exactly how many eyes you caught — and what they did next.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ NODE JOURNEY ═════════════════════ -->
+    <section class="node-journey px-page pt-section pb-section" id="journey" aria-labelledby="journey-heading">
+      <div class="node-image-wrap reveal-left">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+          alt="Sleek modern vending machine with digital display in a commercial space"
+          loading="lazy"
+        />
+        <div class="node-image-tag">
+          <span class="node-tag-label">Attention Metric</span>
+          <span class="node-tag-value">94% Gaze Duration</span>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <span class="node-content-eyebrow">The Process</span>
+        <h2 class="node-headline" id="journey-heading">The Node<br/>Journey.</h2>
+
+        <ul class="journey-steps stagger-children">
+          <li class="journey-step">
+            <span class="step-num">01</span>
+            <div>
+              <h4 class="step-title">Placement</h4>
+              <p class="step-desc">We scout high-dwell-time zones in the city's most vibrant commercial hubs — offices, gyms, co-working spaces, premium residentials.</p>
+            </div>
+          </li>
+          <li class="journey-step">
+            <span class="step-num">02</span>
+            <div>
+              <h4 class="step-title">Activation</h4>
+              <p class="step-desc">Your brand goes live on our 55″ high-fidelity screens, synchronized across the network in real-time.</p>
+            </div>
+          </li>
+          <li class="journey-step">
+            <span class="step-num">03</span>
+            <div>
+              <h4 class="step-title">Conversion</h4>
+              <p class="step-desc">Seamless interaction drives immediate product trial and lasting brand recall — at the precise moment of purchase intent.</p>
+            </div>
+          </li>
+          <li class="journey-step">
+            <span class="step-num">04</span>
+            <div>
+              <h4 class="step-title">Analytics</h4>
+              <p class="step-desc">Real-time dashboard tracks impressions, dwell time, and SKU velocity. No black-box metrics, just clear ROI.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TICKER ════════════════════════════ -->
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item"><span class="dot"></span> <strong>LIVE</strong> — 10+ nodes active across Bengaluru</div>
+        <div class="ticker-item"><span class="dot"></span> New partner onboarding: Whitefield Coworks</div>
+        <div class="ticker-item"><span class="dot"></span> <strong>Q1 2025</strong> — Hyderabad expansion confirmed</div>
+        <div class="ticker-item"><span class="dot"></span> Average CPM: ₹28 — 6× cheaper than digital OOH</div>
+        <div class="ticker-item"><span class="dot"></span> <strong>500k+</strong> weekly impressions. No bots.</div>
+        <div class="ticker-item"><span class="dot"></span> SmartNode v2 launching: AI-driven content rotation</div>
+        <!-- duplicate -->
+        <div class="ticker-item"><span class="dot"></span> <strong>LIVE</strong> — 10+ nodes active across Bengaluru</div>
+        <div class="ticker-item"><span class="dot"></span> New partner onboarding: Whitefield Coworks</div>
+        <div class="ticker-item"><span class="dot"></span> <strong>Q1 2025</strong> — Hyderabad expansion confirmed</div>
+        <div class="ticker-item"><span class="dot"></span> Average CPM: ₹28 — 6× cheaper than digital OOH</div>
+        <div class="ticker-item"><span class="dot"></span> <strong>500k+</strong> weekly impressions. No bots.</div>
+        <div class="ticker-item"><span class="dot"></span> SmartNode v2 launching: AI-driven content rotation</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════ PULL QUOTE ════════════════════════ -->
+    <section class="quote-section" aria-label="Brand quote">
+      <div class="quote-inner">
+        <span class="quote-mark reveal" aria-hidden="true">"</span>
+        <blockquote class="pull-quote reveal">
+          If they aren't looking at your ad,<br/>
+          did you even <span class="italic">spend the money?</span>
+        </blockquote>
+        <cite class="quote-source reveal">— The WENDZ Manifesto, Page 0</cite>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════════════════════ -->
+    <section class="cta-section" id="cta">
+      <div class="cta-inner reveal-scale">
+        <span class="cta-bg-text" aria-hidden="true">WNDZ</span>
+        <h2 class="cta-headline">
+          Ready to be<br/><span class="accent">Memorable?</span>
+        </h2>
+        <div>
+          <a href="pages/contact.html" class="cta-btn cta-btn-primary">Join the Network</a>
+          <a href="pages/manifesto.html" class="cta-btn cta-btn-outline">Read the Manifesto</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-bg-word" aria-hidden="true">WENDZ</div>
+
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">WENDZ</div>
+        <p class="footer-tagline">
+          The takeover is silent until it's deafening.<br/>
+          Not another boring screen. Ever.
+        </p>
+      </div>
+
+      <div>
+        <span class="footer-col-label">Philosophy</span>
+        <ul class="footer-links">
+          <li><a href="pages/manifesto.html">The Manifesto</a></li>
+          <li><a href="#">Media Kit</a></li>
+          <li><a href="#">Case Studies</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-label">Connect</span>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-label">Contact</span>
+        <ul class="footer-links">
+          <li><a href="pages/contact.html">Partner With Us</a></li>
+          <li><a href="#">Legal Boring Stuff</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">©2025 WENDZ LLP. All rights reserved. Stay Quirky.</p>
+      <a href="mailto:hello@wendz.co" class="footer-email">hello@wendz.co</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

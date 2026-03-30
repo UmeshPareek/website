@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Manifesto — WENDZ</title>
+  <meta name="description" content="The WENDZ Manifesto. On irrelevance, interruption by invitation, and the death of boring retail." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@300;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    .manifesto-image-break {
+      width: 100%;
+      height: 60svh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .manifesto-image-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.2);
+      transition: filter 0.8s ease, transform 0.8s ease;
+    }
+
+    .manifesto-image-break:hover img {
+      filter: grayscale(0) contrast(1);
+    }
+
+    .manifesto-image-caption {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      text-align: right;
+      color: #fff;
+    }
+
+    .manifesto-image-caption .cap-label {
+      font-family: var(--font-label);
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .manifesto-image-caption .cap-text {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 1.5rem;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    .manifesto-cta-dark {
+      background: var(--primary);
+      color: #fff;
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+
+    .manifesto-cta-dark h2 {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-ghost-white {
+      display: inline-block;
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border: 2px solid #fff;
+      color: #fff;
+      margin: 0 0.5rem;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s var(--ease-back);
+    }
+
+    .btn-ghost-white:hover {
+      background: #fff;
+      color: var(--primary);
+      transform: scale(1.04);
+    }
+
+    .btn-solid-white {
+      display: inline-block;
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      background: #fff;
+      color: var(--primary);
+      margin: 0 0.5rem;
+      border: 2px solid transparent;
+      transition: transform 0.3s var(--ease-back), box-shadow 0.3s ease;
+    }
+
+    .btn-solid-white:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      .btn-ghost-white, .btn-solid-white {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 18rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-wordmark">
+      <span style="animation-delay:0.0s">M</span><span style="animation-delay:0.07s">A</span><span style="animation-delay:0.14s">N</span><span style="animation-delay:0.21s">I</span><span style="animation-delay:0.28s">F</span><span style="animation-delay:0.35s">E</span><span style="animation-delay:0.42s">S</span><span style="animation-delay:0.49s">T</span><span style="animation-delay:0.56s">O</span>
+    </div>
+    <div class="preloader-bar-track">
+      <div class="preloader-bar-fill"></div>
+    </div>
+    <span class="preloader-label">Loading the gospel…</span>
+  </div>
+
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#stats">Impact</a>
+    <a href="../index.html#features">Network</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="contact.html">Join Us</a>
+  </nav>
+
+  <header class="nav">
+    <a href="../index.html" class="nav-logo">WENDZ</a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-links">
+        <li><a href="../index.html#stats">Impact</a></li>
+        <li><a href="../index.html#features">Network</a></li>
+        <li><a href="../index.html#journey">Process</a></li>
+        <li><a href="manifesto.html" class="active">Manifesto</a></li>
+        <li><a href="contact.html">Join the Collective</a></li>
+      </ul>
+    </nav>
+    <button class="nav-cta" onclick="window.location='contact.html'">Partner Now</button>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="manifesto-hero">
+      <div>
+        <span class="hero-eyebrow">Manifesto 01.</span>
+        <h1 class="hero-headline">
+          <span class="line"><span>The Art of</span></span>
+          <span class="line"><span class="accent">Irrelevance.</span></span>
+        </h1>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:0.5rem;">
+        <p class="hero-subtext">
+          Standard retail didn't just die. It bored itself to death. WENDZ is the resurrection — a neural architecture for the brave and the quirky.
+        </p>
+      </div>
+    </section>
+
+    <!-- IMAGE BREAK 1 -->
+    <div class="manifesto-image-break reveal-scale">
+      <img
+        src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80"
+        alt="High contrast architecture with sharp shadows"
+        loading="lazy"
+        data-parallax="0.15"
+      />
+      <div class="manifesto-image-caption">
+        <span class="cap-label">Structure // 042</span>
+        <span class="cap-text">Irrelevance is the only<br/>weapon against the algorithm.</span>
+      </div>
+    </div>
+
+    <!-- MANIFESTO CONTENT -->
+    <div class="manifesto-content">
+
+      <!-- Block 01 -->
+      <div class="manifesto-block">
+        <div>
+          <span class="manifesto-block-num reveal">01 / Philosophy</span>
+        </div>
+        <div>
+          <h2 class="manifesto-block-title reveal">In-house<br/><span style="color:var(--primary)">Built.</span></h2>
+          <p class="manifesto-block-body reveal">
+            We don't buy solutions. We build ecosystems. Every line of code, every architectural curve, and every neural node is crafted within our own walls. We believe the best technology is invisible — it simply works, so your brand can simply shine.
+          </p>
+          <p class="manifesto-block-body reveal" style="margin-top:1rem">
+            Autonomy is luxury. When you own the stack, you own the outcome.
+          </p>
+        </div>
+      </div>
+
+      <!-- Block 02 -->
+      <div class="manifesto-block">
+        <div>
+          <span class="manifesto-block-num reveal">02 / Product</span>
+        </div>
+        <div>
+          <h2 class="manifesto-block-title reveal">Neural<br/>Retail.</h2>
+          <p class="manifesto-block-body reveal">
+            Our spaces adapt. They learn. They sense the collective mood of the city and shift their content accordingly. This isn't vending; it's a synchronized dance between human desire and machine intuition.
+          </p>
+          <p class="manifesto-block-body reveal" style="margin-top:1rem">
+            The store that thinks, so you don't have to.
+          </p>
+        </div>
+      </div>
+
+      <!-- PULL QUOTE -->
+      <div style="padding:5rem 0;text-align:center;border-bottom:1px solid var(--outline-variant);">
+        <span class="quote-mark reveal" aria-hidden="true" style="display:block;font-family:var(--font-headline);font-size:5rem;font-weight:900;color:var(--primary);line-height:0.5;margin-bottom:1rem">"</span>
+        <blockquote class="pull-quote reveal">
+          If it makes sense, we're doing it <span class="italic">wrong.</span><br/>Logic is for the stagnant.
+        </blockquote>
+        <cite class="quote-source reveal">— The WENDZ Manifesto, Page 0</cite>
+      </div>
+
+      <!-- Block 03 -->
+      <div class="manifesto-block">
+        <div>
+          <span class="manifesto-block-num reveal">03 / Design</span>
+        </div>
+        <div>
+          <h2 class="manifesto-block-title reveal">Hyper<br/>Clarity.</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem">
+            <div style="padding:2rem;background:var(--surface-container-low)" class="reveal">
+              <h4 style="font-family:var(--font-headline);font-weight:700;font-size:1.2rem;text-transform:uppercase;margin-bottom:0.75rem">Zero Noise</h4>
+              <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--on-surface-variant);line-height:1.6">Eliminating the static of traditional commerce to reveal the core essence of the object.</p>
+            </div>
+            <div style="padding:2rem;background:var(--surface-container-low)" class="reveal">
+              <h4 style="font-family:var(--font-headline);font-weight:700;font-size:1.2rem;text-transform:uppercase;margin-bottom:0.75rem">Total Intent</h4>
+              <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--on-surface-variant);line-height:1.6">Every interaction is designed to provoke, not just process. We value friction over flow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 04 -->
+      <div class="manifesto-block">
+        <div>
+          <span class="manifesto-block-num reveal">04 / Future</span>
+        </div>
+        <div>
+          <h2 class="manifesto-block-title reveal">The Ghost<br/>Fleet.</h2>
+          <p class="manifesto-block-body reveal">
+            Our proprietary logistics engine handles all replenishment using predictive algorithms. You provide the wall; we provide the wealth. No stock-outs, no complaints — just pure, passive distribution that feels like magic because it's engineered to.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="manifesto-cta-dark">
+      <h2 class="reveal">Join the Resurrection.</h2>
+      <div class="reveal stagger-children">
+        <a href="contact.html" class="btn-solid-white">Partner With Us</a>
+        <a href="contact.html" class="btn-ghost-white">Read Full Manifesto</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-bg-word" aria-hidden="true">WENDZ</div>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">WENDZ</div>
+        <p class="footer-tagline">Not another boring screen. Ever.</p>
+      </div>
+      <div>
+        <span class="footer-col-label">Philosophy</span>
+        <ul class="footer-links">
+          <li><a href="manifesto.html">The Manifesto</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Connect</span>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-label">Legal</span>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">©2025 WENDZ LLP. Stay Quirky.</p>
+      <a href="mailto:hello@wendz.co" class="footer-email">hello@wendz.co</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
